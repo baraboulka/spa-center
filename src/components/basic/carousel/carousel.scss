@@ -1,0 +1,30 @@
+@import "../../scss/variables.scss";
+
+.testimonials-carousel {
+  width: 50vw;
+
+  .testimonial {
+    @extend %basic-container-flex;
+    padding: $gap-size/2;
+    gap: $gap-size;
+
+    div {
+      padding: $gap-size/2;
+      background-color: #fff;
+      border-radius: 4px;
+    }
+
+    img {
+      width: 100%;
+      padding: 1rem 0;
+      mask-image: linear-gradient(to top, transparent 0%, black 60%);
+    }
+    p {
+      font-size: 0.9rem;
+    }
+    h6 {
+      font-style: italic;
+      text-align: center;
+    }
+  }
+}

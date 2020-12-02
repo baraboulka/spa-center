@@ -1,0 +1,18 @@
+$base-color: #e7efcd;
+$max-dark-color: #483c1f;
+$medium-dark-color: #0e0e0e;
+$dark-accent-color: #7e8925;
+$light-accent-color: #c6c86c;
+$shadows: 1px 1px 4px 1px;
+$scalingLevel: 1.05;
+$hoverTranslation: translateY(-0.5rem);
+$pressTranslation: translateY(0.4rem) translateX(-0.1rem);
+$gap-size: 4rem;
+$padding-lg: 5rem;
+
+%basic-container-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

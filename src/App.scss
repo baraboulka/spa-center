@@ -1,0 +1,120 @@
+@import "components/scss/variables.scss";
+
+.App {
+  min-height: 100vh;
+  height: 100%;
+  @extend %basic-container-flex;
+}
+
+.wrapper {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.main-content {
+  padding: 0 $gap-size;
+}
+
+.header {
+  &__slider {
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(
+        to right bottom,
+        rgba($medium-dark-color, 0.8),
+        rgba($dark-accent-color, 0.8)
+      ),
+      url("./images/slider/slider2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @extend %basic-container-flex;
+    color: $base-color;
+    clip-path: url(#my-clip-path);
+  }
+
+  .svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+}
+
+.about-overview {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 90vh;
+  gap: $gap-size;
+
+  &__image-box {
+    &--image {
+      width: 100%;
+      max-width: 50vw;
+      border: 2px solid lighter($light-accent-color, 25%);
+      box-shadow: $shadows $light-accent-color;
+    }
+  }
+}
+
+.btn-order {
+  &__slider {
+    color: $max-dark-color;
+    background-color: $light-accent-color;
+    border-color: $light-accent-color;
+    box-shadow: $shadows $medium-dark-color;
+  }
+}
+
+.beauticare-presentation {
+  min-height: 80vh;
+  @extend %basic-container-flex;
+
+  .cosmetics-cards {
+    padding: $padding-lg 0;
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    gap: $gap-size;
+  }
+}
+
+.testimonials {
+  @extend %basic-container-flex;
+  min-height: 90vh;
+}
+
+.contacts-overview {
+  min-height: 90vh;
+  @extend %basic-container-flex;
+
+  h2 {
+    margin-bottom: $padding-lg;
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    gap: $gap-size;
+
+    &--map {
+      width: 50%;
+      iframe {
+        width: 100%;
+        height: 50vh;
+        min-height: 400px;
+      }
+    }
+
+    &--data {
+      a {
+        color: $dark-accent-color;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 1rem 0;
+  font-size: 0.8rem;
+}
