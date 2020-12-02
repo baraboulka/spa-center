@@ -1,12 +1,15 @@
 @import "../../scss/variables.scss";
 
 .testimonials-carousel {
-  width: 50vw;
+  width: 95%;
+
+  @media all and (min-width: $breakPoint * 1px) {
+    width: 60vw;
+  }
 
   .testimonial {
     @extend %basic-container-flex;
-    padding: $gap-size/2;
-    gap: $gap-size;
+    padding: 1rem;
 
     div {
       padding: $gap-size/2;

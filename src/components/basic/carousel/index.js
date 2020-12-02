@@ -21,7 +21,7 @@ export default function Carousel() {
           <div className="testimonial" key={author}>
             <article>
               <div>
-                <img src={photo} alt="" />
+                <img src={photo} alt={author} />
                 <p>{testimonial}</p>
                 <h6>{author}</h6>
               </div>

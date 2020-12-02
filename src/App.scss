@@ -11,14 +11,10 @@
   width: 100%;
 }
 
-.main-content {
-  padding: 0 $gap-size;
-}
-
 .header {
   &__slider {
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
     background: linear-gradient(
         to right bottom,
         rgba($medium-dark-color, 0.8),
@@ -41,18 +37,25 @@
 }
 
 .about-overview {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  min-height: 90vh;
-  gap: $gap-size;
+  @extend %basic-container-flex;
 
   &__image-box {
     &--image {
       width: 100%;
-      max-width: 50vw;
       border: 2px solid lighter($light-accent-color, 25%);
       box-shadow: $shadows $light-accent-color;
+    }
+  }
+
+  @media all and (min-width: $breakPoint * 1px) {
+    & {
+      flex-direction: row;
+    }
+
+    &__image-box {
+      &--image {
+        max-width: 50vw;
+      }
     }
   }
 }
@@ -67,38 +70,37 @@
 }
 
 .beauticare-presentation {
-  min-height: 80vh;
   @extend %basic-container-flex;
 
   .cosmetics-cards {
-    padding: $padding-lg 0;
-    width: 70vw;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: $gap-size;
+
+    @media all and (min-width: $breakPoint * 1px) {
+      flex-direction: row;
+      width: 70vw;
+    }
   }
 }
 
 .testimonials {
   @extend %basic-container-flex;
-  min-height: 90vh;
+  width: 100%;
 }
 
 .contacts-overview {
-  min-height: 90vh;
   @extend %basic-container-flex;
-
-  h2 {
-    margin-bottom: $padding-lg;
-  }
 
   &__form {
     width: 100%;
     display: flex;
-    gap: $gap-size;
+    flex-direction: column;
+    text-align: center;
 
     &--map {
-      width: 50%;
+      width: 100%;
       iframe {
         width: 100%;
         height: 50vh;
@@ -109,6 +111,15 @@
     &--data {
       a {
         color: $dark-accent-color;
+      }
+    }
+    @media all and (min-width: $breakPoint * 1px) {
+      flex-direction: row;
+      text-align: left;
+      gap: $gap-size;
+
+      &--map {
+        width: 50%;
       }
     }
   }

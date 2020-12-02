@@ -30,8 +30,13 @@ body {
   padding: 0;
   color: #000;
   background-color: $base-color;
-  font-size: 16px;
+  font-size: 14px;
   position: relative;
+  width: 100%;
+
+  @media all and (min-width: 1024px) {
+    font-size: 16px;
+  }
 }
 
 p {
@@ -50,16 +55,22 @@ h6 {
   margin-top: 2rem;
   margin-bottom: 2rem;
   line-height: 1.5;
+  text-align: center;
+
+  @media all and (min-width: $breakPoint * 1px) {
+    text-align: left;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 
 h1 {
-  font-size: 2.3rem;
-  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.7rem;
-  margin-bottom: 3rem;
 }
 
 h6 {

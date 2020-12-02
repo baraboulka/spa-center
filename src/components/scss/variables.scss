@@ -7,12 +7,50 @@ $shadows: 1px 1px 4px 1px;
 $scalingLevel: 1.05;
 $hoverTranslation: translateY(-0.5rem);
 $pressTranslation: translateY(0.4rem) translateX(-0.1rem);
+$breakPoint: 1025;
+
 $gap-size: 4rem;
 $padding-lg: 5rem;
 
-%basic-container-flex {
+@mixin gaps($gap) {
+  .header__slider h1 {
+    padding: 0 $gap;
+  }
+
+  .main-content {
+    padding: $gap * 1.5 $gap;
+
+    & > section {
+      padding: $gap 0;
+    }
+  }
+
+  .about-overview,
+  .cosmetics-cards,
+  .contacts-overview__form {
+    gap: $gap;
+  }
+
+  .testimonials {
+    padding: 0 $gap;
+  }
+}
+
+%mobile-container-flex {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+%basic-container-flex {
+  @extend %mobile-container-flex;
+  flex-direction: column;
+}
+
+@media all and (min-width: $breakPoint * 1px) {
+  @include gaps(4rem);
+}
+
+@media all and (max-width: ($breakPoint - 1) * 1px) {
+  @include gaps(2rem);
 }
