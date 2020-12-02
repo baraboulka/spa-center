@@ -1,39 +1,43 @@
 import Logo from "../../../images/logo2.png";
 
+import { Link } from "react-router-dom";
+
 import "./upper-bar.scss";
 
 const UpperBar = () => {
   return (
     <div className="header__upper-bar">
       <div className="logo">
-        <img src={Logo} alt="Logo" className="logo-image" />
+        <Link to="/">
+          <img src={Logo} alt="Logo" className="logo-image" />
+        </Link>
       </div>
       <nav className="menu">
         <ul className="menu__list">
           <li className="menu__list--item">
-            <a href="#" className="menu__list--item-link">
+            <Link to="/" className="menu__list--item-link">
               Home
-            </a>
+            </Link>
           </li>
           <li className="menu__list--item">
-            <a href="#" className="menu__list--item-link">
+            <Link to="/about" className="menu__list--item-link">
               About us
-            </a>
+            </Link>
           </li>
           <li className="menu__list--item">
-            <a href="#" className="menu__list--item-link">
+            <Link to="/services" className="menu__list--item-link">
               Our services
-            </a>
+            </Link>
           </li>
           <li className="menu__list--item">
-            <a href="#" className="menu__list--item-link">
+            <Link to="/gallery" className="menu__list--item-link">
               Gallery
-            </a>
+            </Link>
           </li>
           <li className="menu__list--item">
-            <a href="#" className="menu__list--item-link">
+            <Link to="/contacts" className="menu__list--item-link">
               Contacts
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

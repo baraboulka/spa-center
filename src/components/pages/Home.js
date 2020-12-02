@@ -1,30 +1,15 @@
-import "./App.scss";
+import "../../App.scss";
 
-import UpperBar from "./components/basic/upper-bar";
-import Footer from "./components/basic/footer";
-import Card from "./components/basic/card";
-import Carousel from "./components/basic/carousel";
+import UpperBar from "../../components/basic/upper-bar";
+import Footer from "../../components/basic/footer";
+import Card from "../../components/basic/card";
+import Carousel from "../../components/basic/carousel";
 
-import AboutImg from "./images/about_introduction.jpg";
+import AboutImg from "../../images/about_introduction.jpg";
 
-import { cosmeticsCards } from "./app-data";
+import { cosmeticsCards } from "../../app-data";
 
-// import React, { Component } from "react";
-// import { render } from "react-dom";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link,
-//   Redirect,
-// } from "react-router-dom";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Services from "./pages/Services";
-// import Gallery from "./pages/Gallery";
-// import Contacts from "./pages/Contacts";
-
-function App() {
+const Home = () => {
   return (
     <div className="App">
       <div className="wrapper">
@@ -106,6 +91,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
-export default App;
+export default Home;
